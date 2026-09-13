@@ -119,7 +119,6 @@ def try_download_video(url):
     except subprocess.CalledProcessError as e:
         raise Exception("An error occurred in the yt-dl process:\n" \
                 + e.stderr.decode(*ENCODE_ARGS))
-        file = None
     download_history[url] = file
     return file
 
